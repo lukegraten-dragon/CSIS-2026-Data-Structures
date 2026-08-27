@@ -4,6 +4,9 @@ using namespace std ;
 
 int main () 
 {
+    // double is a more precise compared to a float
+    // variable type, but mostly doesn't matter for
+    // non-precise handling.
     double salePrice ;        // the selling price of the item
     double stateSalesTax ;    // the state’s sales tax
     double citySalesTax ;     // the city’s sales tax
@@ -13,6 +16,8 @@ int main ()
 
     //salePrice = 60000.00 ;
     cout << "Enter salePrice: " ;
+
+    //cin acts as an input from the terminal
     cin >> salePrice ;
 
     stateSalesTax = salePrice * 0.04 ;
@@ -21,6 +26,7 @@ int main ()
     if (salePrice >= 50000)
         luxuryTax = salePrice * 0.1 ;
     else
+        // catch all for invalid input
         luxuryTax = 0 ;
 
     cout << "stateSalesTax = " << stateSalesTax << endl ;

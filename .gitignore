@@ -100,3 +100,21 @@ Temporary Items
 *.app
 
 # End of https://www.toptal.com/developers/gitignore/api/c++
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/executable
+# Edit at https://www.toptal.com/developers/gitignore?templates=executable
+
+### Executable ###
+*.app
+*.bat
+*.cgi
+*.com
+*.exe
+*.gadget
+*.jar
+*.pif
+*.vb
+*.wsf
+
+# End of https://www.toptal.com/developers/gitignore/api/executable

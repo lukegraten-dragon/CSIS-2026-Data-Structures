@@ -13,6 +13,10 @@ int main()
     float g ;
     double h ;
 
+    // Uses sizeof() to display data type size in bytes
+    // On Mac long has 8 bytes allocated. On Windows however, the system allocates
+    // 4 bytes to long, the same size as int. long long allocates the same 8 bytes cross-platform
+
     cout << "Size of char = "<< sizeof(a) <<" bytes \n" ;
     cout << "Size of short = "<< sizeof(b) <<" bytes \n" ;
     cout << "Size of int = "<< sizeof(c) <<" bytes \n" ;

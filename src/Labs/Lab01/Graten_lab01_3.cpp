@@ -7,14 +7,11 @@ int main()
 {
     // Declare variables
     int fahrenheit = 110 ;
-    int celsius ;
+    double celsius ;
 
-    // Compute temperatures.
-    // Since they all use int, 5 / 9 rounds down to 0, so
-    // putting it first in order will multiply whatever is in the
-    // parenthesis by 0. Which will return a 0
-
-    celsius = (fahrenheit - 32) * 5 / 9 ;
+    // FIX: Use a decimal value (double) to prevent the divison result from being rounded down to 0
+    // and fix the subtle semantic error.
+    celsius = 5.0 / 9 * (fahrenheit - 32) ;
     cout << fahrenheit << " degree F = " << celsius << " degree C. " << endl ;
 
     return 0 ;

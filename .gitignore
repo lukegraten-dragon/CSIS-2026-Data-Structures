@@ -117,3 +117,8 @@ Temporary Items
 *.wsf
 
 # End of https://www.toptal.com/developers/gitignore/api/executable
+
+# Custom directories I don't want to push (These are used for my own purposes, such as understanding
+# certain concepts like double free).
+
+.Unsafe/

@@ -30,5 +30,7 @@ int main()
     cout << "Perimeter = " << perimeter << endl ;
     cout << "Area = " << area << endl ;
 
+    cout << "C++ Version: " << __cplusplus << '\n' ;
+
     return 0 ;
 }

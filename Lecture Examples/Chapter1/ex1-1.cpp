@@ -25,7 +25,7 @@ int main ()
 
     int area = length * width ;
 
-    cout << "area = " << perimeter << endl ;
+    cout << "area = " << area << endl ;
 
     // Main function returns 0 if the program runs successfully
     return 0 ;

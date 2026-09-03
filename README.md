@@ -11,7 +11,7 @@ I'm committed to writing more safe and correct code from the start as a habit.
 ### Compiler flags I use on my local machine:
 
 ```
-    "-std=c++14",
+    "-std=c++26",
     "-fcolor-diagnostics",
     "-fansi-escape-codes",
     "-g",

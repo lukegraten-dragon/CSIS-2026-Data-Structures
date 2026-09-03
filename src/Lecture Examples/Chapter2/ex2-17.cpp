@@ -12,6 +12,8 @@ int main()
     double inches ;
 
     cout << "Enter two integers separated by one or more spaces: " ;
+
+    // cin uses >> notation to represent getting input from the user. 
     cin >> feet >> inches ;
     cout << endl ;
 

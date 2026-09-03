@@ -26,7 +26,7 @@ int main()                                            //Line 4
     cout << "Line 13: secondNum = " << secondNum 
          << endl ;                                    //Line 13
 
-    firstNum = firstNum + NUMBER + 2 * secondNum ;    //Line 14
+    firstNum = firstNum + NUMBER + 2 * secondNum ;    //Line 14 // Does an Operation
 
     cout << "Line 15: The new value of " 
          << "firstNum = " << firstNum << endl ;       //Line 15

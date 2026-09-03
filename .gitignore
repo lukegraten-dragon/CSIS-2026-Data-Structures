@@ -124,3 +124,6 @@ Temporary Items
 Unsafe/
 Sandbox/
 build/
+
+src/Unsafe/
+src/Sandbox/

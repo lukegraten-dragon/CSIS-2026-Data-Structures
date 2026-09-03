@@ -31,5 +31,5 @@ I'm committed to writing more safe and correct code from the start as a habit.
     "-fstack-protector-strong",
     "-mbranch-protection=standard", // NOTE: This flag only works on supported ARM64 CPUs (e.g. Apple M2 Pro) and will cause a compilation error on x64 CPUs (Intel/AMD)
     "-o",
-    "${fileDirname}/${fileBasenameNoExtension}"
+    "${workspaceFolder}/build/${fileBasenameNoExtension}"
 ```

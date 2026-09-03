@@ -118,8 +118,9 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/executable
 
-# Custom directories I don't want to push (These are used for my own purposes, such as understanding
-# certain concepts like double free).
+# Custom directories I don't want to push. These are used for my own purposes, such as understanding
+# certain concepts or storing compiled builds in a dedicated place that won't be pushed to the repository.
 
 Unsafe/
 Sandbox/
+build/

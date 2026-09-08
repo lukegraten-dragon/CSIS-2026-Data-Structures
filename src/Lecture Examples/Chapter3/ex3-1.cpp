@@ -8,6 +8,7 @@ int main()
     double z ;
     char ch ;
 
+    // Assigns user input to the variable via cin
     cin >> ch ;
     cout << "ch = " << ch << endl ;
     

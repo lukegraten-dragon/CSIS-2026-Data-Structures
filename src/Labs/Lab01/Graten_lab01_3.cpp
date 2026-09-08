@@ -1,4 +1,12 @@
-// Student, CSIS 255, Luke Graten, 09.03.2026
+/******************************************************/
+//
+// Minnesota State University Moorhead
+// Name: Luke Graten
+// Student ID: 17013071
+// Lab 01
+// Date Modified: 09-08-2026
+//
+/******************************************************/
 
 # include <iostream>
 using namespace std ;
@@ -16,3 +24,12 @@ int main()
 
     return 0 ;
 }
+
+/*
+Reflection
+
+In this lab section I discovered a subtle semantic error
+in how data is operated on can have a huge impact on the result.
+Using this knowledge, I'll keep a sharper eye on how variables
+are operated on so future programs behave as intended.
+*/

@@ -3,26 +3,21 @@
 // Minnesota State University Moorhead
 // Name: Luke Graten
 // Student ID: 17013071
-// Lab 01
+// Assignment 01
 // Date Modified: 09-08-2026
 //
 /******************************************************/
 
-# include <iostream> 
+# include <iostream>
 using namespace std ;
 
 int main () 
 {
-    // Print my name
-    cout << "Luke Graten" << '\n' ;
 
-    return 0;
 }
 
 
 /*
 Reflection
 
-In this lab section, I learned how to use cout to print
-data to the command line.
 */

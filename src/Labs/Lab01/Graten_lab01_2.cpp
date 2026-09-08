@@ -1,4 +1,12 @@
-// Student, CSIS 255, Luke Graten, 09.03.2026
+/******************************************************/
+//
+// Minnesota State University Moorhead
+// Name: Luke Graten
+// Student ID: 17013071
+// Lab 01
+// Date Modified: 09-08-2026
+//
+/******************************************************/
 
 # include <iostream>
 using namespace std;
@@ -21,3 +29,11 @@ int main ()
 
     return 0 ;
 }
+
+/*
+Reflection
+
+In this lab section I learned how to declare variables
+and use operators to compute the result of two variables
+of the same type (in this case, compute the area of a triangle).
+*/

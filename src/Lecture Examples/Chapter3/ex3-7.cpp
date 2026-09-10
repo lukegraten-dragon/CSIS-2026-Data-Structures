@@ -29,6 +29,8 @@ int main()                                           //Line 3
     // The stream function peek looks into the input 
     // stream and tells you what the next character is 
     // without removing it from the input stream.
+
+    // Doesn't modify the input stream
     ch = cin.peek() ;                                //Line 15
     cout << "Line 16: After cin.peek(); ch = "
          << ch << endl ;                             //Line 16

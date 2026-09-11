@@ -20,6 +20,7 @@ int main()
          << ", pay = " << hours * rate
          << ", tolerance = " << tolerance << endl << endl ;
 
+     // Function setprecision is called to limit decimal precision to 8 values
     cout << scientific << setprecision(8) ; 
     cout << "Scientific notation: " << endl ; 
     cout << "hours = " << hours << ", rate = " << rate

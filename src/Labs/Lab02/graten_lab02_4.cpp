@@ -46,14 +46,16 @@ int main ()
     // NOTE: After each input cycle, the places shown is set to
     // to a precision level of up to 6 places after the decimal. Since
     // the setprecision() formatting function used in previous input is sticky
-    // and persistent unless 'toggled off' in some way. Even though
-    // the stored value isn't changed internally.
+    // and persistent unless 'toggled off' using unsetf(), (which
+    // the instructions of this lab doesn't specify). Even though
+    // the stored value isn't changed internally when formatting is applied.
 
     cout << setw(columnWidth) <<input1
         << fixed << setprecision(3) << setw(columnWidth) << input1
         << scientific << setw(columnWidth) << input1
         << fixed << setprecision(6)
         << '\n' ;
+
 
     cout << setw(columnWidth) << input2
         << setprecision(3) << setw(columnWidth) << input2

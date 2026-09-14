@@ -45,8 +45,9 @@ int main ()
     // Display results
     // NOTE: After each input cycle, the places shown is set to
     // to a precision level of up to 6 places after the decimal. Since
-    // the setprecision() function used in previous input is sticky
-    // and persistent unless 'toggled off' in some way.
+    // the setprecision() formatting function used in previous input is sticky
+    // and persistent unless 'toggled off' in some way. Even though
+    // the stored value isn't changed internally.
 
     cout << setw(columnWidth) <<input1
         << fixed << setprecision(3) << setw(columnWidth) << input1

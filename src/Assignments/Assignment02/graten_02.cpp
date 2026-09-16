@@ -11,6 +11,7 @@
 
 # include <iostream>
 # include <iomanip>
+# include <cmath>
 # include <string>
 using namespace std ;
 
@@ -105,7 +106,9 @@ int main ()
          << setw(columnWidth) << round(input5)
          << setw(columnWidth) << fixed << showpoint << setprecision(3) << input5
          << setw(columnWidth) << scientific << input5
-         << '\n'; 
+         << '\n';
+    
+    cout << headerLine << '\n' ;
     
     return 0 ;
 }

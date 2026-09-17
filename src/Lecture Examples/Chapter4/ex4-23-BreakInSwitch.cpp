@@ -25,16 +25,19 @@ int main()                                              //Line 3
     case 4:                                             //Line 19
         break ;                                         //Line 20
     case 5:                                             //Line 21
-        cout << "This program shows the effect " ;      //Line 22
-    case 6:                                             //Line 23
+        cout << "This program shows the effect " << endl ; 
+        break ;      //Line 22
+    case 6: 
+        cout << "This is six." << endl ;    
+        break ;                                         //Line 23
     case 7:                                             //Line 24
         cout << "of the break statement." << endl ;     //Line 25
-        break;                                          //Line 26
+        break ;                                          //Line 26
     default:                                            //Line 27
         cout << "The number is out of range." << endl ; //Line 28 
     }                                                   //Line 29
 
-    cout << "Out of the switch structure." << endl ;    //Line 30
+    cout << "We're now out of the switch structure." << endl ;    //Line 30
 
     return 0 ;                                          //Line 31
 }                                                       //Line 32

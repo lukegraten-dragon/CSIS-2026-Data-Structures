@@ -12,6 +12,10 @@ int main()
     cin >> grade ;
     cout << endl ;
 
+
+    // Checks the letter grade value. 
+    // In each case, the statements are separate and do not execute.
+    // switch checks for a specific value.
     switch (grade)
     {
     case 'A':

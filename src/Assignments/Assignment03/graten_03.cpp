@@ -42,9 +42,6 @@ int main ()
         return 1 ;
     }
 
-    // I discovered that an EOF loop only extracts input while extraction is successful and doesn't
-    // actually extract input on a per line basis like I
-    // initially thought. This resulted in the last line in students.txt being read twice.
     while(inFile && !inFile.eof())
     {
         /******************************************************/
@@ -54,7 +51,7 @@ int main ()
         gradeValue = 5 ;
         inFile >> name >> examScore >> participation >> attendance ;
 
-        // Automatic error for invalid scores (Convert to assert or something similar and skip the current loop iteration)
+        // Automatic error for invalid scores
         if ((participation < 0 || participation > 10.0) || (attendance < 0 || attendance > 10.0))
             {
                 cout << name << " Error! Invalid input detected" << '\n' ;
@@ -122,7 +119,6 @@ int main ()
                     letterGrade = 'F' ;
                     break ;
             }
-
         /******************************************************/
         // Print appropriate output
         /******************************************************/
@@ -139,5 +135,15 @@ int main ()
 ******************************************************
 Post-Assigment Reflection
 
+I discovered that an EOF loop only extracts input while extraction is successful and doesn't
+ actually extract input on a per line basis like I initially thought (confused with standard stream behavior). 
+ This resulted in the last line in students.txt being read twice. To fix the semantic error I introduced, I
+ changed the EOF controlled loop to check if we're at the end of life, and don't execute if it is eof.
+
+My program leveraged conditional branching (if, else if, else) to determine grading logic, file execution
+ tasks, and how the EOF controlled loop operated.
+
+The grading logic used floating point comparison to determine the base letter grade a student received via their
+ participation and exam scores.
 ******************************************************
 */

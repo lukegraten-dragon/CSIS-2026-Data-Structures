@@ -26,7 +26,7 @@ int main ()
     double participation ;
     double attendance ;
 
-    int gradeValue = 5 ; // Integer that can be modified based on the conditions
+    int gradeValue; // Integer that can be modified based on the conditions
     char letterGrade ; // Final letter grade (to be computed)
     string gradeReason ; // Optional reason why a student got their grade.
 
@@ -42,6 +42,9 @@ int main ()
     /******************************************************/
     // Conditional logic for calculating grades
     /******************************************************/
+    
+    // Reset gradeValue to default level of 5 (A)
+    gradeValue = 5 ;
 
     // Automatic error for invalid scores (Convert to assert or something similar and skip the current loop iteration)
     if (participation < 0 || participation > 10.0)
@@ -69,7 +72,6 @@ int main ()
         }
 
     // Grading based on participation and exam scores
-
     if (examScore >= 90 && participation >= 7.0)
         gradeValue = gradeValue - 0 ;
 
@@ -87,7 +89,6 @@ int main ()
         gradeValue = gradeValue - 4 ;
 
     // Assign appropriate letter grade
-
     switch (gradeValue)
         {
             case 5:

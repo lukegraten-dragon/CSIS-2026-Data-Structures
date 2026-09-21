@@ -11,7 +11,7 @@
 
 # include <iostream>
 # include <iomanip>
-# include <cmath>
+# include <fstream>
 # include <string>
 using namespace std ;
 
@@ -26,96 +26,112 @@ int main ()
     double participation ;
     double attendance ;
 
-    int gradeValue; // Integer that can be modified based on the conditions
+    int gradeValue; // Integer that can be modified based on the grading conditions
     char letterGrade ; // Final letter grade (to be computed)
     string gradeReason ; // Optional reason why a student got their grade.
 
-    
     /******************************************************/
-    // Parse through txt file
+    // Open and parse through text file if it exists.
     /******************************************************/
+    ifstream inFile ;
+    inFile.open("students.txt") ;  
 
-    cout << "Input sample data (test only): " ;
-    cin >> name >> examScore >> participation >> attendance ;
-    cout << '\n' ;
+    if (!inFile)
+    {
+        cout << "The correct file could not be found. Terminating program." << '\n' ;
+        return 1 ;
+    }
 
-    /******************************************************/
-    // Conditional logic for calculating grades
-    /******************************************************/
-    
-    // Reset gradeValue to default level of 5 (A)
-    gradeValue = 5 ;
+    // I discovered that an EOF loop only extracts input while extraction is successful and doesn't
+    // actually extract input on a per line basis like I
+    // initially thought. This resulted in the last line in students.txt being read twice.
+    while(inFile && !inFile.eof())
+    {
+        /******************************************************/
+        // EOF Controlled loop and conditional logic for calculating grades
+        /******************************************************/
 
-    // Automatic error for invalid scores (Convert to assert or something similar and skip the current loop iteration)
-    if (participation < 0 || participation > 10.0)
-        {
-            cout << "Error! Invalid Participation Value" << '\n' ;
-        }
+        gradeValue = 5 ;
+        inFile >> name >> examScore >> participation >> attendance ;
 
-    if (attendance < 0 || attendance > 10.0)
-        {
-            cout << "Error! Invalid Attendance Value" << '\n' ;
-        }
+        // Automatic error for invalid scores (Convert to assert or something similar and skip the current loop iteration)
+        if ((participation < 0 || participation > 10.0) || (attendance < 0 || attendance > 10.0))
+            {
+                cout << name << " Error! Invalid input detected" << '\n' ;
+                continue ;
+            }
 
-    // Check Attendance and decrement grade (if possible)
-    if (attendance >= 5.0 && attendance <= 7.0)
-        {
-            gradeValue = gradeValue - 1 ;
-            gradeReason = " (minus 1 letter grade due to subpar attendance)" ;
-        }
+        // Check Attendance and decrement grade (if possible)
+        if (attendance >= 5.0 && attendance <= 7.0)
+            {
+                gradeValue = gradeValue - 1 ;
+                gradeReason = " (minus 1 letter grade due to subpar attendance)" ;
+            }
 
-    else if (attendance < 5.0)
-        {
-            // Failure case (no need to do extra comparison since we've guaranteed the other conditions)
-            gradeValue = 0 ;
-            gradeReason = " (due to low attendance)" ;
-        }
+        else if (attendance < 5.0)
+            {
+                // Failure case (no need to do extra comparison since we've guaranteed the other conditions)
+                gradeValue = 0 ;
+                gradeReason = " (due to low attendance)" ;
+            }
 
-    // Grading based on participation and exam scores
-    if (examScore >= 90 && participation >= 7.0)
-        gradeValue = gradeValue - 0 ;
+        // Grading based on participation and exam scores
+        if (examScore >= 90 && participation >= 7.0)
+            {
+                gradeValue = gradeValue - 0 ;
+            }
 
-    else if (examScore >= 80 && participation >= 6.0)
-        gradeValue = gradeValue - 1 ;
+        else if (examScore >= 80 && participation >= 6.0)
+            {
+                gradeValue = gradeValue - 1 ;
+            }
 
-    else if (examScore >= 70 && participation >= 5.0)
-        gradeValue = gradeValue - 2 ;
+        else if (examScore >= 70 && participation >= 5.0)
+            {
+                gradeValue = gradeValue - 2 ;
+            }
 
-    else if (examScore >= 60 && participation >= 4.0)
-        gradeValue = gradeValue - 3 ;
+        else if (examScore >= 60 && participation >= 4.0)
+            {
+                gradeValue = gradeValue - 3 ;
+            }
 
-    else
-        // If participation and exam scores are insufficient
-        gradeValue = gradeValue - 4 ;
+        else
+            // If participation and/or exam scores are insufficient
+            {
+                gradeValue = gradeValue - 4 ;
+            }
 
-    // Assign appropriate letter grade
-    switch (gradeValue)
-        {
-            case 5:
-                letterGrade = 'A' ;
-                break ;
-            case 4: 
-                letterGrade = 'B' ;
-                break ;
-            case 3:
-                letterGrade = 'C' ;
-                break ;
-            case 2:
-                letterGrade = 'D' ;
-                break ;
-            default:
-                // Set as F is gradeValue is below 1
-                letterGrade = 'F' ;
-                break ;
-        }
+        // Assign appropriate letter grade
+        switch (gradeValue)
+            {
+                case 5:
+                    letterGrade = 'A' ;
+                    break ;
+                case 4: 
+                    letterGrade = 'B' ;
+                    break ;
+                case 3:
+                    letterGrade = 'C' ;
+                    break ;
+                case 2:
+                    letterGrade = 'D' ;
+                    break ;
+                default:
+                    // Set as F if gradeValue is below 1
+                    letterGrade = 'F' ;
+                    break ;
+            }
 
-    /******************************************************/
-    // Print appropriate output
-    /******************************************************/
+        /******************************************************/
+        // Print appropriate output
+        /******************************************************/
 
-    cout << "Name: " << name << '\n' ;
-    cout << "Grade: " << letterGrade << gradeReason << '\n' ;
-
+        cout << "Name: " << name << '\n' ;
+        cout << "Grade: " << letterGrade << gradeReason << "\n\n" ;
+    }
+    // Close the file and terminate the program successfully
+    inFile.close() ; 
     return 0 ;
 }
 

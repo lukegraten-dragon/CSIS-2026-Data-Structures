@@ -43,7 +43,7 @@ int main ()
     // Conditional logic for calculating grades
     /******************************************************/
 
-    // Automatic error for invalid scores
+    // Automatic error for invalid scores (Convert to assert or something similar and skip the current loop iteration)
     if (participation < 0 || participation > 10.0)
         {
             cout << "Error! Invalid Participation Value" << '\n' ;
@@ -54,51 +54,40 @@ int main ()
             cout << "Error! Invalid Attendance Value" << '\n' ;
         }
 
-    // Check Attendance and grade accordingly
-    if (attendance > 7.0)
+    // Check Attendance and decrement grade (if possible)
+    if (attendance >= 5.0 && attendance <= 7.0)
         {
-            // Check Exam scores and participation
-            if (examScore >= 90 && participation >= 7.0)
-                gradeValue = gradeValue - 0 ;
-            else if (examScore >= 80 && participation >= 6.0)
-                gradeValue = gradeValue - 1 ;
-            else if (examScore >= 70 && participation >= 5.0)
-                gradeValue = gradeValue - 2 ;
-            else if (examScore >= 60 && participation >= 4.0)
-                gradeValue = gradeValue - 3 ;
-            else
-                // If participation and exam scores are insufficient
-                gradeValue = gradeValue - 4 ;
-
-        }
-    else if (attendance >= 5.0 && attendance <= 7.0)
-        {
-            // Dock 1 letter grade
             gradeValue = gradeValue - 1 ;
-            gradeReason = " (Minus 1 letter grade due to subpar attendance)" ;
-
-            // Check Exam scores and participation
-            if (examScore >= 90 && participation >= 7.0)
-                gradeValue = gradeValue - 0 ;
-            else if (examScore >= 80 && participation >= 6.0)
-                gradeValue = gradeValue - 1 ;
-            else if (examScore >= 70 && participation >= 5.0)
-                gradeValue = gradeValue - 2 ;
-            else if (examScore >= 60 && participation >= 4.0)
-                gradeValue = gradeValue - 3 ;
-            else
-                // If participation and exam scores are insufficient
-                gradeValue = gradeValue - 4 ;
+            gradeReason = " (minus 1 letter grade due to subpar attendance)" ;
         }
 
-    else
+    else if (attendance < 5.0)
         {
-            // Automatic fail due to low attendance
+            // Failure case (no need to do extra comparison since we've guaranteed the other conditions)
             gradeValue = 0 ;
             gradeReason = " (due to low attendance)" ;
-        } 
+        }
+
+    // Grading based on participation and exam scores
+
+    if (examScore >= 90 && participation >= 7.0)
+        gradeValue = gradeValue - 0 ;
+
+    else if (examScore >= 80 && participation >= 6.0)
+        gradeValue = gradeValue - 1 ;
+
+    else if (examScore >= 70 && participation >= 5.0)
+        gradeValue = gradeValue - 2 ;
+
+    else if (examScore >= 60 && participation >= 4.0)
+        gradeValue = gradeValue - 3 ;
+
+    else
+        // If participation and exam scores are insufficient
+        gradeValue = gradeValue - 4 ;
 
     // Assign appropriate letter grade
+
     switch (gradeValue)
         {
             case 5:
@@ -114,7 +103,7 @@ int main ()
                 letterGrade = 'D' ;
                 break ;
             default:
-                // Set as F is gradeValue is 0 or 1.
+                // Set as F is gradeValue is below 1
                 letterGrade = 'F' ;
                 break ;
         }

@@ -51,7 +51,7 @@ int main ()
         gradeValue = 5 ;
         inFile >> name >> examScore >> participation >> attendance ;
 
-        // Automatic error for invalid scores
+        // Automatic error for invalid input (attendance and/or participation)
         if ((participation < 0 || participation > 10.0) || (attendance < 0 || attendance > 10.0))
             {
                 cout << name << " Error! Invalid input detected" << '\n' ;

@@ -8,7 +8,7 @@ int main()
 {
     int i ;
 
-    for (i = 10; i >= 1; i--)
+    for (i = 10; i >= 1; i--) // Decrements loop variable. But same functionality as before.
         cout << " " << i ;
     cout << endl ;
 

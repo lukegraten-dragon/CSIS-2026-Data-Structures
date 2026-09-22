@@ -48,7 +48,7 @@ int main()
         while (counter <= nthFibonacci)
         {
             current = previous2 + previous1 ;      //Step 6.c.2
-            previous1 = previous2 ;                //Step 6.c.3
+            previous1 = previous2 ;                //Step 6.c.3  // Lefthand side points to right hand side value.
             previous2 = current ;                  //Step 6.c.4
             counter++ ;                            //Step 6.c.5
         }//end while

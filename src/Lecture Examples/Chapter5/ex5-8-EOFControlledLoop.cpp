@@ -21,8 +21,8 @@ int main()                                              //Line 6
     int count = 0 ;                                     //Line 13
 
     //Declare stream variables
-    ifstream inFile ;                                   //Line 14
-    ofstream outFile ;                                  //Line 15 
+    ifstream inFile ;                                   //Line 14 // Read from a file
+    ofstream outFile ;                                  //Line 15 // Generate and write data to a file
 
     //Open input file
     inFile.open("ex5-8-stData.txt") ;                   //Line 16
@@ -34,7 +34,7 @@ int main()                                              //Line 6
         return 1 ;                                      //Line 20 
     }                                                   //Line 21
     //Open output file
-    outFile.open("ex5-8-stData.out") ;                  //Line 22
+    outFile.open("ex5-8-stData.out") ;                  //Line 22 // Data printed to a .out result file (Can be a .txt extension file as well)
 
     outFile << fixed << showpoint << setprecision(2) ;  //Line 23
 

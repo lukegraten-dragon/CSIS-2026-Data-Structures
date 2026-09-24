@@ -7,7 +7,7 @@ int main()
 {
     int i, j ;
 
-    for (i = 1; i <= 5; i++)           //Line 1
+    for (i = 1; i <= 6; i++)           //Line 1
     {                                  //Line 2
         
         for (j = 1; j <= 10; j++)      //Line 3

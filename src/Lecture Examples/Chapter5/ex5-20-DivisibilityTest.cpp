@@ -18,7 +18,7 @@ int main()
      
     do
     {
-        sum = sum + num % 10 ; //extract the last digit
+        sum = sum + num % 10 ; //extract the last digit (avoids losing decimal precision by using decimal types)
                                //and add it to sum
         num = num / 10 ;       //remove the last digit
     } 

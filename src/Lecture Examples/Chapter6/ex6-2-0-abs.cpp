@@ -16,6 +16,8 @@ int main()
 
 int abs(int number)
 {
+    // Absolute value measures the objective distance a number
+    // is from zero.
     if (number < 0)
         number = -number ;
 

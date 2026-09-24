@@ -49,7 +49,7 @@ int main()
 		sum = sum + num ;
 		cin >> num ;
 	}
-
+  
 	cout << endl ;
 	cout << "The sum is: " << sum << endl ;
 

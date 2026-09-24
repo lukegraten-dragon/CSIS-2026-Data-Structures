@@ -29,13 +29,13 @@ int main()
 
 double larger(double x, double y)
 {
-    // double max ;
+    double max ;
 
-    // if (x >= y)
-    //     max = x ;
-    // else
-    //     max = y ;
+    if (x >= y)
+        max = x ;
+    else
+        max = y ;
     
-    // return max ;
-    return (x > y) ? x : y ;
+    return max ;
+    return (x > y) ? x : y ; // Ternary operator is okay for a 1 line return statement
 }

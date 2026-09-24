@@ -13,7 +13,7 @@ int main()
     int sum, counter, num ;
 
     counter = 0 ;                           //Line 1
-    while (counter < 5)                     //Line 2
+    while (counter < 5)                     //Line 2 // Amount of lines in the file
     {                                       //Line 3
         sum = 0 ;                           //Line 4
 

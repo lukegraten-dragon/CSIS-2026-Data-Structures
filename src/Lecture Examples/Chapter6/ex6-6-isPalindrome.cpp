@@ -23,6 +23,7 @@ int main()
 
 bool isPalindrome(string str)
 {
+    // A palindrome is a word that reads the same backwards and forwards
     int length = str.length() ;                  //Step 1
 
     for (int i = 0; i < (length - 1) / 2; i++)   //Step 2

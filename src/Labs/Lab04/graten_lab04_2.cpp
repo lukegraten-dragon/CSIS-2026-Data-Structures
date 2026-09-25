@@ -23,7 +23,6 @@ int main ()
     cout << "Enter a number of rows: " ;
     cin >> rowAmount ;
     
-
     // Print the triangle
     // i -> row iteration level
     // j -> character slot to be printed

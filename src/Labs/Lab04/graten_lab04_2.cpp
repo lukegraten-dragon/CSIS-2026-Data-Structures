@@ -16,7 +16,7 @@ using namespace std ;
 
 int main ()
 {
-    char printedChar = '-' ;
+    char printedChar = '*' ;
     int rowAmount ;
 
     // Request user input
@@ -50,7 +50,7 @@ int main ()
 /*
 Post Lab Reflection:
 
-This lab was somewhat difficult.
+This lab section was somewhat difficult.
 
 First I created a nested loop structure. Where the amount of rows 
 would iterate through the outer loop. The inner loop
@@ -64,4 +64,5 @@ was the iterator variable in the outermost loop.
 
 Using a dual-nested loop structure I printed the necessary amount of spaces
 before I printed all the required * .
+
 */

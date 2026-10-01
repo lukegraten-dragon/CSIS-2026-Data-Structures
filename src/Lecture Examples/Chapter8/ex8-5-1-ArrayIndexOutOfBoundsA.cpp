@@ -9,7 +9,7 @@ int main()
 
     list[0] = 5 ;
     list[1] = 10 ;
-    //list[2] = 15 ; //Array index is out of bounds
+    list[2] = 15 ; //Array index is out of bounds (causes crash due to AddressSanitizer)
 
     // On some new compilers, if an array index goes out of bounds in a program, 
     // it is possible that the program terminates with an error message.
@@ -21,3 +21,6 @@ int main()
 
     return 0 ;
 }
+
+// Accessing out of bounds indecies is a major memory safety issue and can either cause a crash or
+// lead to undefined behavior.

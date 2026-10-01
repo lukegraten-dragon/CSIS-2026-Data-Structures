@@ -46,3 +46,5 @@ void averageAndGrade(int testScore, int progScore,
     else
         grade = 'F' ;
 }
+
+// Uses call by refernce without a return statement

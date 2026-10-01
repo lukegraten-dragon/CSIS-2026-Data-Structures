@@ -17,5 +17,7 @@ int main()
 {
     cout << "Inner namespace value: " << Outer::Inner::value << endl ;
 
+    // Outer::Inner accesses the nested namespace. Though nested namespaces
+    // aren't a good practice.
     return 0 ;
 }

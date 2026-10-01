@@ -18,11 +18,11 @@ int main()
 // A variable for which memory is allocated at block entry and deallocated at block exit
 // is called an automatic variable. A variable for which memory remains allocated as
 // long as the program executes is called a static variable. Global variables are static
-// variables, and by default, variables declared within a block are automatic variables.
+// variables, and by default, variables declared within a block (scope, e.g. a function) are automatic variables.
 // You can declare a static variable within a block by using the reserved word static.
 void test()
 {
-    static int x = 0 ;
+    static int x = 0 ; // Static variable that remains in memory rather than being deallocated at function termination
     int y = 10 ;
 
     x = x + 2 ;

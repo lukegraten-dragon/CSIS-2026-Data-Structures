@@ -9,6 +9,7 @@ int main()
     int list[ARRAY_SIZE] ;
 
     // When you declare an array, its size must be specified. 
+    // Before runtime.
     // For example, you cannot do the following:
     int arraySize ;                           //Line 1
 
@@ -16,7 +17,7 @@ int main()
     cin >> arraySize ;                        //Line 3
     cout << endl ;                            //Line 4
 
-    int list[arraySize];                      //Line 5; not allowed
+    int list2[arraySize];                      //Line 5; not allowed
 
     // The statement in Line 2 asks the user to enter the size of 
     // the array when the program executes. The statement in Line 3 

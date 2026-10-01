@@ -18,7 +18,7 @@ void swap(int a, int b)
 }
 
 // Call by Reference (aliases)
-void swap2(int& a, int& b)
+void swap2(int& a, int& b) // & tells compiler to not send a copy
 {
     // Variables are passed in with nicknames or aliases
     // An & passes the variables using a nickname

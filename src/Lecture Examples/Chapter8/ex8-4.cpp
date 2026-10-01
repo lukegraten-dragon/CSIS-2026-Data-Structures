@@ -38,3 +38,6 @@ int main()
                  << "test score." << endl ; 
     return 0 ;
 } 
+
+// Iterating through arrays can help reduce code size
+// and make code more readable and succinct.

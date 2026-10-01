@@ -18,3 +18,8 @@ int main()
 
     return 0 ;
 }
+
+/*
+Trying to access an index that doesn't exist in an array also causes an out of bound access violation.
+Its a major memory safety issue and Sanitizers can help catch unseen memory safety violations.
+*/

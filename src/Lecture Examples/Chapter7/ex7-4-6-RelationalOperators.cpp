@@ -11,14 +11,15 @@ int main ()
 
     popularSport = FOOTBALL ;
 
-    cout << "FOOTBALL <= SOCCER: " << (FOOTBALL <= SOCCER) << endl ;
-    cout << "HOCKEY > BASKETBALL: " << (HOCKEY > BASKETBALL) << endl ;
-    cout << "BASEBALL < FOOTBALL: " << (BASEBALL < FOOTBALL) << endl << endl ;
+    // Prints a boolean value (1 = True, 0 = False) to the terminal
+    cout << "FOOTBALL <= SOCCER: " << (FOOTBALL <= SOCCER) << endl ; // True
+    cout << "HOCKEY > BASKETBALL: " << (HOCKEY > BASKETBALL) << endl ; // True
+    cout << "BASEBALL < FOOTBALL: " << (BASEBALL < FOOTBALL) << endl << endl ; // False
 
     popularSport = SOCCER ;
     mySport = VOLLEYBALL ;
 
-    cout << "popularSport < mySport: " << (popularSport < mySport) << endl ;
+    cout << "popularSport < mySport: " << (popularSport < mySport) << endl ; 
 
     return 0 ; 
 }

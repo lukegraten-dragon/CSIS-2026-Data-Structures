@@ -18,7 +18,7 @@ int main()
     list[5] = 34 ;
     list[3] = 63 ; // is equivalent to i = 3 ; list[i] = 63 ;
 
-    list[3] = 10 ;
+    list[3] = 10 ; // Place values or expressions inside an array index
     list[6] = 35 ;
     list[5] = list[3] + list[6] ;
 
@@ -27,7 +27,8 @@ int main()
          << "list[5]: " << list[5] << endl ;
 
     int i = 4 ;
-    list[2 * i - 3] = 58 ;
+    list[2 * i - 3] = 58 ; // We can place a computation inside an array index
+    // We placed the value 58 inside index 5
 
     cout << "i: " << i << endl 
          << "list[2 * i - 3]: " << list[2 * i - 3] << endl ;

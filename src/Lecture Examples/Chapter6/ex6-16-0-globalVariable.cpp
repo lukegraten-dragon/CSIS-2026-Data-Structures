@@ -3,7 +3,11 @@
 
 using namespace std ;                                //Line 2
 
-int t ;    //global variable                           Line 3
+int t ;    //global variable (Accessible throughout the entire program)
+
+// Global variables can be modified throughout the program and their
+// values are going to be persistent (unless reset at the end of a function)
+// Its important to keep track of how global variables are managed in the program.
 
 void funOne(int& a) ;                                //Line 4  
 
@@ -21,7 +25,7 @@ int main()                                           //Line 5
     return 0 ;                                       //Line 11
 }                                                    //Line 12 
 
-void funOne(int& a)                                  //Line 13 
+void funOne(int& a) // Pass parameter by reference                                 //Line 13 
 {                                                    //Line 14 
     cout << "Line 15: In funOne: a = " << a 
          << " and t = " << t << endl ;               //Line 15
@@ -35,3 +39,10 @@ void funOne(int& a)                                  //Line 13
     cout << "Line 19: In funOne: a = " << a 
          << " and t = " << t << endl ;               //Line 19
 }                                                    //Line 20 
+
+
+/*
+Since we passed variables by reference the function doesn't need to
+have a return statement at the end. Though manipulating variables
+directly is unsafe and could have unintended side effects.
+*/

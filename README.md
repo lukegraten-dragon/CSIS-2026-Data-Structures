@@ -19,6 +19,7 @@ I'm committed to writing more safe and correct code from the start as a habit.
     "-Wextra",
     "${file}",
     "-Wsign-conversion",
+    "-Wconversion",
     "-Wshadow",
     "-Wnull-dereference",
     "-Wunsafe-buffer-usage",
@@ -28,7 +29,7 @@ I'm committed to writing more safe and correct code from the start as a habit.
     "-fno-omit-frame-pointer",
     "-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE",
     "-fstack-protector-strong",
-    "-mbranch-protection=standard",
+    "-mbranch-protection=standard", // Supported on ARM v8.5+ or v9.0+ CPUs that only have Branch Target Identification (BTI) mitigation
     "-o",
     "${workspaceFolder}/build/${fileBasenameNoExtension}"
 ```

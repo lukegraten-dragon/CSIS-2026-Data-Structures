@@ -21,6 +21,8 @@ int main()
 
     cout << "The average test score = " << average << endl ;
 
+
+    // Checks if a specific test is less than the average.
     if (test0 < average)
         cout << test0 << " is less than the average "
              << "test score." << endl ;
@@ -47,3 +49,5 @@ int main()
 // process 100 test scores, you would have to declare 100 variables 
 // and write many cin, cout, and if statements. 
 // Thus, for large amounts of data, this type of program is not efficient.
+
+// In programming its best to stay DRY (Don't repeat yourself) where possible

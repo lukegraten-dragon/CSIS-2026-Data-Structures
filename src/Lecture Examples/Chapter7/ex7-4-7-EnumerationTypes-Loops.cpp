@@ -11,7 +11,9 @@ int main ()
 
     // Recall that the enumeration type is an integral type and that, using the cast operator 
     // (that is, type name), you can increment, decrement, and compare the values of the 
-    // enumeration type. Therefore, you can use these enumeration types in loops. 
+    // enumeration type. Therefore, you can use these enumeration types in loops.
+
+    // Enumators are iterable in a loop
     for (mySport = BASKETBALL; mySport <= VOLLEYBALL; mySport = static_cast<sports>(mySport + 1))
     {
         cout << "mySport: " << mySport << endl ;

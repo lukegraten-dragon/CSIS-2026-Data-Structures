@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std; 
 
+// Global variables have a default value
+
 int globalInt ;           // Default initialized to 0
 float globalFloat ;       // Default initialized to 0.0f
 double globalDouble ;     // Default initialized to 0.0
@@ -8,6 +10,11 @@ bool globalBool ;         // Default initialized to false
 char globalChar ;         // Default initialized to '\0'
 
 int main() {
+    // Local variables don't have a preset default value, so
+    // they use whatever garbage is left over in memory. Which
+    // can lead to undefined behavior.
+    // Its best practice to initialize local variables with
+    // a default value.
     int localInt ;
     float localFloat ;
     double localDouble ;

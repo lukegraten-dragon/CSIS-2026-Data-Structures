@@ -3,7 +3,7 @@
    
 using namespace std ; 
 
-void functionXYZ() ;
+void functionXYZ() ; // These all have different parameters
 void functionXYZ(int x, double y) ;
 void functionXYZ(double one, int y) ;
 void functionXYZ(int x, double y, char ch) ;
@@ -22,3 +22,9 @@ void functionXYZ() { }
 void functionXYZ(int x, double y) { }
 void functionXYZ(double one, int y) { }
 void functionXYZ(int x, double y, char ch) { }
+
+/*
+The compiler looks up the function table and
+interprets the functions as separate due to have differing function parameters/metadata
+this allows for function name reuse.
+*/

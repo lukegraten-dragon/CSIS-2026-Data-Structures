@@ -15,7 +15,7 @@ int main()                                           //Line 4
     str1 = "Hello There" ;                           //Line 9
     cout << "Line 10: str1 = " << str1 << endl ;     //Line 10
 
-    str2 = str1 ;                                    //Line 11
+    str2 = str1 ; // Points to str1                                    //Line 11
     cout << "Line 12: str2 = " << str2 << endl ;     //Line 12
 
     str1 = "Sunny" ;                                 //Line 13

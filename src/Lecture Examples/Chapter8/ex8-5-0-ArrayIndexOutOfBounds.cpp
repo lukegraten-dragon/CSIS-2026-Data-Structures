@@ -6,6 +6,7 @@ using namespace std ;
 // The index—say, index—of an array is in bounds if index is between 0 and
 // ARRAY_ SIZE - 1, that is, 0 <= index <= ARRAY_SIZE - 1. If index is negative or
 // index is greater than ARRAY_SIZE - 1, then we say that the index is out of bounds.
+// Out of bounds accesses are bad and can cause program crashes.
 int main() 
 {
     int a = 18 ;

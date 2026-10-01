@@ -37,3 +37,10 @@ void areaAndPerimeter(double length, double width,
     area = length * width ;
     perimeter = 2 * (length + width) ;
 }
+
+/*
+Call by reference creates a side effect.
+
+Call by reference does save memory but its unsafe to use if you
+don't know what is going on.
+*/

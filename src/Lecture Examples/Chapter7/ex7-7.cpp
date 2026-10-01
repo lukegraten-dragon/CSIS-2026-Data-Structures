@@ -5,13 +5,14 @@ using namespace std ;
 
 int main () 
 {
-    typedef int Boolean ;     //Line 1
+    typedef int Boolean ;     //Line 1 // typedef only creates an alias or nickname to an
+    // existing datatype
     const Boolean True = 1 ;  //Line 2
     const Boolean False = 0 ; //Line 3
     
     Boolean flag ;            //Line 4
 
-    flag = True ;             // Legal
+    flag = True ;  // Legal
 
     return 0 ;
 }

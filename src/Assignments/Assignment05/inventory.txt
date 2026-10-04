@@ -1,0 +1,10 @@
+Widget 150
+Gadget 240
+Doohickey 75
+Thingamajig 320
+Whatchamacallit 180
+Contraption 95
+Device 205
+Mechanism 130
+Gizmo 165
+Apparatus 250

@@ -1,0 +1,16 @@
+Item Name                Quantity                 
+---------------------------------
+Widget                   150                      
+Gadget                   240                      
+Doohickey                75                       
+Thingamajig              320                      
+Whatchamacallit          180                      
+Contraption              95                       
+Device                   205                      
+Mechanism                130                      
+Gizmo                    165                      
+Apparatus                250                      
+---------------------------------
+Total number of items: 1810
+Item with the highest stock: Thingamajig (320)
+Item with the lowest stock: Doohickey (75)

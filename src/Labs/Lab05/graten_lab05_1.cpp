@@ -30,6 +30,9 @@ int main ()
     cout << "Enter the number of temperatures to convert: " ;
     cin >> tempQuantity ;
 
+    // Format output
+    cout << fixed << setprecision(2) ;  
+
     // Loop for temperature conversions
     for (int i = 0 ; i < tempQuantity ; i++)
     {
@@ -38,9 +41,6 @@ int main ()
         cout << "Enter temperature " << i + 1 
         << " in Fahrenheit: " ;
         cin >> TempFahrenheit ;
-
-        // Format output
-        cout << fixed << setprecision(2) ;  
 
         // Convert to Celsius via function call
         cout << "*** Fahrenheit: " << TempFahrenheit

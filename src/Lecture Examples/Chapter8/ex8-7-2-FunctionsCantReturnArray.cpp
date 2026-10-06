@@ -1,4 +1,5 @@
 // C++ does not allow functions to return a value of the type array. 
+// A function cannot just return a WHOLE array.
 // Note that the functions sumArray and indexLargestElement described 
 // earlier return values of type int.
 
@@ -33,8 +34,13 @@ int main()
     return 0 ;
 }
 
-void updateArray1 (int int_array[], int size)
+void updateArray1 (int int_array[], int size) // Modifies an array 'in place'
 {
     for (int i=0; i<size; i++)
         int_array[i] = int_array[i] + 3 ;
 }
+
+/*
+Encapsulation is usually a good idea in our programs. Ensuring that behavior 
+is clearly defined and separated between function.
+*/

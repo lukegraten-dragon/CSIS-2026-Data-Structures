@@ -16,8 +16,12 @@ int main()
     // The following statement is illegal
     //yourList = myList ; //illegal
 
+    // Arrays can't be assigned as whole pointers.
+
     // To copy one array into another array, you must copy it 
-    // component-wise—that is, one component at a time.
+    // component-wise—that is, one component at a time via a loop.
+    // Creates a deep copy (aka a clone in a new array rather than a series of pointers to the original
+    // that can cause side effects)
     for (int index = 0; index < 5; index++)
         yourList[index] = myList[index] ;
 
@@ -27,7 +31,8 @@ int main()
 
     // Note that the following statements are legal in the sense that they 
     // do not generate a syntax error; however, they do not give the desired results.
-    cout << myList << endl ;
+    
+    cout << myList << endl ; // Does not return every element of an array as you might think, but instead its location in memory.
     cout << yourList << endl ;
 
     // Output Interpretation: The addresses you see in the output 
@@ -47,5 +52,6 @@ int main()
     // and the remaining space in memory likely causes the two arrays to be 
     // separated by 32 bytes.
 
+    // Memory management is different on Unix-like and Windows. Windows 
     return 0 ;
 }

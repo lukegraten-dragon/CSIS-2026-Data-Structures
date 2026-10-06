@@ -5,11 +5,11 @@ using namespace std ;
 
 void initializeArray(int list[], int listSize) ;
 void fillArray(int list[], int listSize) ;
-void printArray(const int list[], int listSize) ;
-int  sumArray(const int list[], int listSize) ;
+void printArray(const int list[], int listSize) ; // Const is a good use for printing or summing existing data without modifying the original array being passed in.
+int  sumArray(const int list[], int listSize) ; // Const acts like a read-only check on parameters. Avoids pass by value copies and enforces read only input.
 int  indexLargestElement(const int list[], int listSize) ;
 void copyArray(int list1[], int src, 
-               int list2[], int tar, int numOfElements) ;
+               int list2[], int tar, int numOfElements) ; // The first parameter, src, can be set as const to avoid side effects.
 
 int main()
 {

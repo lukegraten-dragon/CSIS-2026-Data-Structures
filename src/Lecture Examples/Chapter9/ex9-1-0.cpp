@@ -4,6 +4,7 @@
 
 using namespace std ;
 
+// Struct is a custom programmer-defined data structure, like a container that can have variables inside it
 struct studentType
 {
     string firstName ;
@@ -19,14 +20,14 @@ int main()
     // record variable
     studentType newStudent ;
 
-    newStudent.firstName = "John" ;
+    newStudent.firstName = "John" ; // Define each 'part' of the newStudent studentType struct instance
     newStudent.lastName = "Brown" ;
     newStudent.courseGrade ;
     newStudent.testScore = 100 ;
     newStudent.programmingScore = 95 ;
     newStudent.GPA = 4.3 ;
     
-    if (newStudent.testScore >= 90)
+    if (newStudent.testScore >= 90) // Use if statement to select lettergrade based off instance courseGrade
         newStudent.courseGrade = 'A' ;
     else if (newStudent.testScore >= 80)
         newStudent.courseGrade = 'B' ;

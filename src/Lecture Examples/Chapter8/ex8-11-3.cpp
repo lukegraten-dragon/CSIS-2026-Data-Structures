@@ -24,7 +24,7 @@ void largestInRows(int matrix[][NUMBER_OF_COLUMNS],
 
 int main()                                           //Line 9
 {                                                    //Line 10
-    int board[NUMBER_OF_ROWS][NUMBER_OF_COLUMNS] 
+    int board[NUMBER_OF_ROWS][NUMBER_OF_COLUMNS] // Declare the 2D array
                         = {{17, 8, 24, 10, 28},
                            {9, 20, 16, 55, 90},
                            {25, 45, 35, 8, 78},
@@ -92,3 +92,5 @@ void largestInRows(int matrix[][NUMBER_OF_COLUMNS],
              << " = " << largest << endl ;
     }
 }
+
+// Chaper 8 and below is covered on the midterm exam

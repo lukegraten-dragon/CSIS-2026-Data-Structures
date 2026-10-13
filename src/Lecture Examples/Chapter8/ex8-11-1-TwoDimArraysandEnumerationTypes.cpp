@@ -14,5 +14,7 @@ int main()
     // You can also use the enumeration type for array indices.
     inStock[FORD][WHITE] = 15 ;  // inStock[1][3] = 15 ;
 
+    // An array can be used with enums
+
     return 0 ;
 }

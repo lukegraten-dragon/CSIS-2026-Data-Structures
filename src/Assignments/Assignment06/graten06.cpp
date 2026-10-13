@@ -142,6 +142,7 @@ void Library::addBook(Book newBook)
         {
             // Assign the newBook to the available index
             bookCollection[availableBookIndex] = newBook ;
+            cout << "Book added successfully!" << '\n' ;
 
             // Save the book to output txt file
             saveBooksToFile() ;

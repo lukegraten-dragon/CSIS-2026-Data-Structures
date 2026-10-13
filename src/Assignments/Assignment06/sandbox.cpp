@@ -4,6 +4,7 @@
 # include <format>
 # include <fstream>
 # include <sstream>
+# include <typeinfo>
 using namespace std ;
 
 // Book Class
@@ -38,6 +39,8 @@ Book::Book()
 
 Book::Book(string t, string a, int y, int p)
 {
+    // TODO: Ensure integer data passed into this object
+    // constructor is valid.
     title = t ;
     author = a ;
     year = y ;
@@ -132,6 +135,7 @@ void Library::addBook(Book newBook)
         {
             // Assign the newBook to the available index
             bookCollection[availableBookIndex] = newBook ;
+            cout << "Book added successfully!" << '\n' ;
 
             // Save the book to output txt file
             saveBooksToFile() ;

@@ -121,27 +121,46 @@ Library::Library()
 }
 
 // Public Member Functions
-// TODO: Add check to prevent attempting to add books out of bounds
 void Library::addBook(Book newBook)
 {
-    int availableBookIndex = 0 ;
+    try
+    {
+        int availableBookIndex = 0 ;
 
-    // Loop through all books and find an empty index
-    for (int currentBook = 0 ; currentBook < 100 ; currentBook++)
-    {   
-        if (bookCollection[currentBook].getTitle() == "" )
-        {
-            break ;
+        // Loop through all books and find an empty index
+        for (int currentBook = 0 ; currentBook < 100 ; currentBook++)
+        {   
+            if (bookCollection[currentBook].getTitle() == "" )
+            {
+                break ;
+            }
+            // Increment the book index 
+            availableBookIndex++ ;
         }
-        // Increment the book index 
-        availableBookIndex++ ;
+
+        if (availableBookIndex >= 0 && availableBookIndex < 100)
+        {
+            // Assign the newBook to the available index
+            bookCollection[availableBookIndex] = newBook ;
+
+            // Save the book to output txt file
+            saveBooksToFile() ;
+        }
+        else
+        {
+            throw out_of_range(format("Library::addBook({}) -> Can't add titled book out of range!", newBook.getTitle())) ;
+        }
     }
+    catch (const out_of_range& e)
+    {
+        // Print the error message
+        cout << "\nERROR: " ;
+        cerr << e.what() << '\n' ;
+        cout << '\n' ;
 
-    // Assign the newBook to the available index
-    bookCollection[availableBookIndex] = newBook ;
-
-    // Save the book to output txt file
-    saveBooksToFile() ;
+        // Exit function
+        return ;
+    }
 }
 
 void Library::displayAllBooks()

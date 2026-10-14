@@ -595,6 +595,13 @@ interpolating strings in a straightforward manner using format. I also
 broke down the problem by implementing class functions and testing
 them in a separate file.
 
+The hardest part of this program in my opinion was implementing the
+loadBooksFromFile() function. My approach used getline() to
+extract a line (in an EOF controlled while loop) from the booklist.txt
+file and store it as a string. I then "casted" that line string
+using sstream into a stream that I broke down further and stored
+into separate strings I could use to add details to a book in the library. 
+
 As my implementation was feature complete. I compared it
 carefully against the reference output to evaluate the correctness
 of my implemented classes. In the initial comparison round
@@ -612,7 +619,7 @@ it from executing. This fixed the issue of an infinite menu loop
 occurring and inconsistent data being written to the booklist.txt file.
 
 For ensuring the collection numbers were displayed in a consistent and
-updated manner after a book was removed, I leveraged my implemented
+updated manner after a book was removed, I tweaked my implemented
 loadBooksFromFile() helper to refresh the internal library collection (bookCollection[]).
 This was a hack that wasn't as efficient compared to using a sorting algorithm
 on the ineternal library collection array, but as I'm preparing for the midterm exam

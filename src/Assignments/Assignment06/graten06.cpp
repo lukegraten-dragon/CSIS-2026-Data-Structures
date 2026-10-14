@@ -544,6 +544,7 @@ void Library::saveBooksToFile()
     outFile.close() ;
 }
 
+// My custom helpers
 void Library::refreshCollection()
 {
     // Clear books from collection array
@@ -563,6 +564,7 @@ bool Library::checkStream()
     {
         cin.clear() ;
         cin.ignore(numeric_limits<streamsize>::max(), '\n') ;
+        cout << '\n' << "ERROR: Cin Stream Error -> Invalid Integer Input, operation aborted!" << '\n' ;
         return false ;
     }
 
@@ -626,7 +628,7 @@ on the ineternal library collection array, but as I'm preparing for the midterm 
 I decided to use this approach to save time and take note of it.
 
 Overall, this assigment was challenging and took me many hours to complete. But I felt
-like searching forums, documentation and the lecture example code helped me understand
+like searching forums, documentation and the lecture example codes helped me understand
 how I could implement specific parts of this assignment which was a huge help.
 */
 /******************************************************/

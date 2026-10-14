@@ -5,7 +5,7 @@
 // Student ID: 17013071
 // Course: CSIS 255
 // Assignment 06
-// Date Modified: 10-12-2026
+// Date Modified: 10-13-2026
 // Generative AI Use: No AI Used
 //
 /******************************************************/
@@ -623,7 +623,7 @@ updated manner after a book was removed, I tweaked my implemented
 loadBooksFromFile() helper to refresh the internal library collection (bookCollection[]).
 This was a hack that wasn't as efficient compared to using a sorting algorithm
 on the ineternal library collection array, but as I'm preparing for the midterm exam
-I decided to use this approach and take note of it.
+I decided to use this approach to save time and take note of it.
 
 Overall, this assigment was challenging and took me many hours to complete. But I felt
 like searching forums, documentation and the lecture example code helped me understand

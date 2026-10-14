@@ -1,0 +1,148 @@
+Book added successfully!
+Book added successfully!
+Book added successfully!
+Book added successfully!
+Book added successfully!
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 2
+
+No.  Title                         Author              Year      Pages     
+---------------------------------------------------------------------------
+1    Moby Dick                     Herman Melville     1851      635       
+2    1984                          George Orwell       1949      328       
+3    Pride and Prejudice           Jane Austen         1813      279       
+4    To Kill a Mockingbird         Harper Lee          1960      281       
+5    The Catcher in the Rye        J.D. Salinger       1951      277       
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 1
+
+Enter the title: C Programming Language
+Enter the author: Dennis Ritchie
+Enter the year of publication: 1988
+Enter the number of pages: 272
+Book added successfully!
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 2
+
+No.  Title                         Author              Year      Pages     
+---------------------------------------------------------------------------
+1    Moby Dick                     Herman Melville     1851      635       
+2    1984                          George Orwell       1949      328       
+3    Pride and Prejudice           Jane Austen         1813      279       
+4    To Kill a Mockingbird         Harper Lee          1960      281       
+5    The Catcher in the Rye        J.D. Salinger       1951      277       
+6    C Programming Language        Dennis Ritchie      1988      272       
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 3
+
+Enter the author's name: George Orwell
+No.  Title                         Author              Year      Pages     
+---------------------------------------------------------------------------
+2    1984                          George Orwell       1949      328       
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 4
+
+No.  Title                         Author              Year      Pages     
+---------------------------------------------------------------------------
+1    Moby Dick                     Herman Melville     1851      635       
+2    1984                          George Orwell       1949      328       
+3    Pride and Prejudice           Jane Austen         1813      279       
+4    To Kill a Mockingbird         Harper Lee          1960      281       
+5    The Catcher in the Rye        J.D. Salinger       1951      277       
+6    C Programming Language        Dennis Ritchie      1988      272       
+
+Enter the number of the book to remove: 6
+Book removed successfully!
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 2
+
+No.  Title                         Author              Year      Pages     
+---------------------------------------------------------------------------
+1    Moby Dick                     Herman Melville     1851      635       
+2    1984                          George Orwell       1949      328       
+3    Pride and Prejudice           Jane Austen         1813      279       
+4    To Kill a Mockingbird         Harper Lee          1960      281       
+5    The Catcher in the Rye        J.D. Salinger       1951      277       
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 6
+
+Enter the title of the book to display: 1984
+No.  Title                         Author              Year      Pages     
+---------------------------------------------------------------------------
+2    1984                          George Orwell       1949      328       
+
+*** Library Management System ***
+1. Add a new book
+2. Display all books
+3. Display books by a specific author
+4. Remove a book by number
+5. Remove a book by title
+6. Display a book by title
+7. Exit
+
+Enter your choice: 7
+
+Exiting the program.

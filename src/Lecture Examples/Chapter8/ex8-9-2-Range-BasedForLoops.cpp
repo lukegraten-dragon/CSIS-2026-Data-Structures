@@ -50,7 +50,7 @@ int main()
     {
         x = x * 2 ;
     }
-    for (const auto& x : arr)
+    for (const auto& x : arr) // Read-only pass through reference (great for printing)
     {
         cout << x << " " ;
     }

@@ -8,8 +8,10 @@ using namespace std ;
 const int NUMBER_OF_ROWS    = 5 ;
 const int NUMBER_OF_COLUMNS = 5 ;
 
+// Function prototypes
+
 void initMatrix(int matrix[][NUMBER_OF_COLUMNS], 
-                int NUMBER_OF_ROWS, ifstream& inFile) ;
+                int NUMBER_OF_ROWS, ifstream& inFile) ; // Reference the input file to avoid a copy (Pass by reference)
 void printMatrix(int matrix[][NUMBER_OF_COLUMNS], 
                  int NUMBER_OF_ROWS) ;
 
@@ -20,7 +22,7 @@ int main()
 
     inFile.open("ex8-11-2.txt") ;
 
-    int board[NUMBER_OF_ROWS][NUMBER_OF_COLUMNS] ;
+    int board[NUMBER_OF_ROWS][NUMBER_OF_COLUMNS] ; // Create a board 2D array
 
     initMatrix(board, NUMBER_OF_ROWS, inFile) ;
     cout << endl ;

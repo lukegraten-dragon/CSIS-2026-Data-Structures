@@ -3,7 +3,7 @@
 
 using namespace std ;
 
-void initialize(int list[], int listSize) ;
+void initialize(int list[], int listSize) ; // Arrays as parameters turn into pointers we can interate on.
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
     return 0 ;
 }
 
-void initialize(int list[], int listSize)
+void initialize(int list[], int listSize) // An array is passed as a pointer when being used a parameter, so no & is needed.
 {
     for (int count = 0; count < listSize; count++)
         list[count] = 0 ;

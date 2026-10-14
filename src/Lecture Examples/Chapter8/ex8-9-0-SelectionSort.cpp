@@ -47,3 +47,10 @@ void selectionSort(int list[], int length)
         list[index] = temp ;
     }
 }
+
+
+/*
+Selection sort first finds the minimum unsorted value in an array by searching and comparing against each element individually. 
+It then forwards them to the 'front' of the array, which is the sorted section. 
+Running multiple times to find the minimum unsorted value and push them forward.
+*/

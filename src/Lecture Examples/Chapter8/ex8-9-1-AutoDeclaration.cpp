@@ -11,6 +11,10 @@ int main()
     auto c = 'x' ;        // deduces 'char'
     auto d = true ;       // deduces 'bool'
 
+    // Auto acts like a dynamic type checker that can attepmt to infer the expected data type of a value. 
+    // Can be helpful when we don't know the data types in advance for certain variables. But it 
+    // tends to reduce program optimization, so use sparingly.
+
     cout << "a: " << setw(4) << a 
          << ", sizeof(a): " << sizeof(a)
          << ", type of a: " << typeid(a).name() << endl ;

@@ -19,9 +19,10 @@ int main()
     double sales[10][5] ;
 
     // Accessing Array Components
-    sales[5][3] = 5.18 ;
+    sales[5][3] = 5.18 ; // Specifies the index of the inner array inside the outer array
 
     // Two-Dimensional Array Initialization during Declaration
+    // Array of arrays (Matrix)
     int board[4][3] = {{2, 3, 1},
                        {15, 25, 13},
                        {20, 4, 7},

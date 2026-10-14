@@ -60,3 +60,13 @@ int seqSearch(const int list[], int listLength, int searchItem)
         return -1 ;
 
 }
+/*
+Sequential search is an inefficient algorithm as we have to check every
+value before we get to the target one. The search time is the worst case is n.
+So for an array of 1 million elements, then it will take 1 million searches to find
+the element n.
+
+Algorithmic efficiency is determined by the worst case scenario.
+
+
+*/

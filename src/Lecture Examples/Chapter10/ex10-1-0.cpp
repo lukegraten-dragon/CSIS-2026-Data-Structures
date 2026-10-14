@@ -52,6 +52,7 @@ int main()
     // the class clockType. Thus, the following statements are illegal 
     // because hr and min are declared as private members of the class clockType 
     // and, therefore, cannot be accessed by the objects myClock and yourClock:
+    
     // myClock.hr = 10; //illegal
     // myClock.min = yourClock.min; //illegal
 

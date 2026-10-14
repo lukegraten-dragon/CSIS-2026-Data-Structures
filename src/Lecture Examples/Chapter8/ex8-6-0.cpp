@@ -3,7 +3,7 @@
 
 using namespace std ;
 
-void initialize(const int list[], int listSize) ;
+void initialize(const int list[], int listSize) ; // Const makes it so the list can't be modified in the function.
 
 int main()
 {
@@ -25,5 +25,5 @@ int main()
 void initialize(const int list[], int listSize)
 {
     for (int count = 0; count < listSize; count++)
-        list[count] = 0 ; // illegal since lvalue must be modifiable.
+        list[count] = 0 ; // illegal since list value must be modifiable.
 }

@@ -3,3 +3,6 @@ Moby Dick,Herman Melville,1851,635
 Pride and Prejudice,Jane Austen,1813,279
 To Kill a Mockingbird,Harper Lee,1960,281
 The Catcher in the Rye,J.D. Salinger,1951,277
+About Android 15,Android Authors,2024,350
+About iOS 26,Apple Inc,2025,250
+About Android 16,Android Authors,2025,360

@@ -6,7 +6,7 @@
 // Course: CSIS 255
 // Assignment 06
 // Date Modified: 10-12-2026
-// AI Use: Non-applicable/No AI
+// Generative AI Use: No AI Used
 //
 /******************************************************/
 # include <iostream>
@@ -101,6 +101,7 @@ class Library
         void loadBooksFromFile() ;
         void saveBooksToFile() ;
         void refreshCollection() ; // Refresh the collection of books
+        bool checkStream() ; // Fix the stream if invalid input causes it to fail
 
     public:
         Library() ; // Default Constructor
@@ -125,6 +126,12 @@ Library::Library()
 // Public Member Functions
 void Library::addBook(Book newBook)
 {
+    // Check stream
+    if (checkStream() == false)
+    {
+        // Exit this function
+        return ;
+    }
     try
     {
         int availableBookIndex = 0 ;
@@ -196,6 +203,12 @@ void Library::displayAllBooks()
 
 void Library::removeBookByNumber(int number)
 {
+    // Check stream
+    if (checkStream() == false)
+    {
+        // Exit this function
+        return ;
+    }
     // Check if the given book number is within the 100 index range of bookCollection
     try
     {
@@ -471,13 +484,6 @@ void Library::loadBooksFromFile()
                 int rYear = stoi(lineParts[2]) ;
                 int rPages = stoi(lineParts[3]) ;
 
-                // // DEBUG: Print these temporarily
-                // cout << "\n\nBook #" << bookIndex << '\n'
-                //     << "Title: " << lineParts[0] << '\n'
-                //     << "Author: " << lineParts[1] << '\n'
-                //     << "Year: " << lineParts[2] << '\n'
-                //     << "Pages: " << lineParts[3] << '\n' ;
-
                 // Create a Book to place in the library
                 Book rBook = Book(rTitle, rAuthor, rYear, rPages) ; 
                 bookCollection[bookIndex] = rBook ;
@@ -550,6 +556,19 @@ void Library::refreshCollection()
     loadBooksFromFile() ;
 }
 
+bool Library::checkStream()
+{
+    // Clear the stream if failure is detected
+    if (cin.fail() == true)
+    {
+        cin.clear() ;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n') ;
+        return false ;
+    }
+
+    // Return true if the stream is okay
+    return true ;
+}
 // Main function
 int main()
 {
@@ -558,3 +577,49 @@ int main()
     
     return 0; 
 }
+
+/******************************************************/
+/*
+Post Assignment Reflection:
+
+I learned about how I could define a class to create
+an object with different attributes and functions. I then
+applied that knowledge with my knowledge of arrays, loops,
+and control flow to build an entirely new class that could contain
+multiple instances of the Book class objects.
+
+I looked heavily at both class lecture examples and searched up documentation
+online to review how to read and write to a file, learn more about classes,
+and find help for things I wanted to add to my program. Such as
+interpolating strings in a straightforward manner using format. I also
+broke down the problem by implementing class functions and testing
+them in a separate file.
+
+As my implementation was feature complete. I compared it
+carefully against the reference output to evaluate the correctness
+of my implemented classes. In the initial comparison round
+I found major bugs in my initial implementation
+with invalid integer input and how the
+book collection numbers were displayed after removing a book.
+
+To deal with invalid integer input, I created a small private
+bool helper function that cleared the input stream whenever
+it failed. I then used that helper to check the stream
+in any function that requested some type of integer input from
+the user via the menu. If the stream was in a fail state, I then
+cleared it and aborted the function to prevent further code inside
+it from executing. This fixed the issue of an infinite menu loop 
+occurring and inconsistent data being written to the booklist.txt file.
+
+For ensuring the collection numbers were displayed in a consistent and
+updated manner after a book was removed, I leveraged my implemented
+loadBooksFromFile() helper to refresh the internal library collection (bookCollection[]).
+This was a hack that wasn't as efficient compared to using a sorting algorithm
+on the ineternal library collection array, but as I'm preparing for the midterm exam
+I decided to use this approach and take note of it.
+
+Overall, this assigment was challenging and took me many hours to complete. But I felt
+like searching forums, documentation and the lecture example code helped me understand
+how I could implement specific parts of this assignment which was a huge help.
+*/
+/******************************************************/

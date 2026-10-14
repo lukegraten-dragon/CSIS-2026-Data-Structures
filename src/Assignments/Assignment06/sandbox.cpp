@@ -91,6 +91,7 @@ class Library
         void loadBooksFromFile() ;
         void saveBooksToFile() ;
         void refreshCollection() ; // Refresh the collection of books in sequential order
+        bool checkStream() ; // Fix the stream if invalid input causes it to fail
 
     public:
         Library() ; // Default Constructor
@@ -115,6 +116,13 @@ Library::Library()
 // Public Member Functions
 void Library::addBook(Book newBook)
 {
+    // Check stream
+    if (checkStream() == false)
+    {
+        // Exit this function
+        return ;
+    }
+
     try
     {
         int availableBookIndex = 0 ;
@@ -186,6 +194,12 @@ void Library::displayAllBooks()
 
 void Library::removeBookByNumber(int number)
 {
+    // Check stream
+    if (checkStream() == false)
+    {
+        // Exit this function
+        return ;
+    }
     // Check if the given book number is within the 100 index range of bookCollection
     try
     {
@@ -444,7 +458,6 @@ void Library::loadBooksFromFile()
                 }
                 stringstream ss(currentLine) ;
 
-                
                 // Each part of the comma separated file line
                 const int LINE_PARTS_SIZE = 4 ;
                 string lineParts[LINE_PARTS_SIZE] ;
@@ -538,6 +551,20 @@ void Library::refreshCollection()
 
     // Reload books from the file
     loadBooksFromFile() ;
+}
+
+bool Library::checkStream()
+{
+    // Clear the stream if failure is detected
+    if (cin.fail() == true)
+    {
+        cin.clear() ;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n') ;
+        return false ;
+    }
+
+    // Return true if the stream is okay
+    return true ;
 }
 
 int main()

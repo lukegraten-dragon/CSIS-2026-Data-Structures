@@ -95,10 +95,12 @@ class Library
 {
     private:
         Book bookCollection[100] ;
+        int fileAccesses = 0 ; // Track how many times the source txt file was accessed
 
         // Private Helper Functions
         void loadBooksFromFile() ;
         void saveBooksToFile() ;
+        void refreshCollection() ; // Refresh the collection of books
 
     public:
         Library() ; // Default Constructor
@@ -146,6 +148,9 @@ void Library::addBook(Book newBook)
 
             // Save the book to output txt file
             saveBooksToFile() ;
+
+            // Refresh the book collection
+            refreshCollection() ;
         }
         else
         {
@@ -202,6 +207,9 @@ void Library::removeBookByNumber(int number)
 
             // Save the book to output txt file
             saveBooksToFile() ;
+
+            // Refresh the book collection
+            refreshCollection() ;
         }
         else
         {
@@ -231,6 +239,9 @@ void Library::removeBookByTitle(string title)
                 cout << "Book removed successfully!" << '\n' ;
                 // Save the book to output txt file
                 saveBooksToFile() ;
+
+                // Refresh the book collection
+                refreshCollection() ;
 
                 return ; // Exit this function successfully
             }
@@ -470,7 +481,13 @@ void Library::loadBooksFromFile()
                 // Create a Book to place in the library
                 Book rBook = Book(rTitle, rAuthor, rYear, rPages) ; 
                 bookCollection[bookIndex] = rBook ;
-                cout << "Book added successfully!" << '\n' ;
+                
+                if (fileAccesses == 0)
+                {
+                    // Do not display this message on collection refresh.
+                    // Only on initial startup.
+                    cout << "Book added successfully!" << '\n' ;
+                }
             }
             catch (const invalid_argument& e)
             {
@@ -490,6 +507,8 @@ void Library::loadBooksFromFile()
         // Exit function with no books if file does not open
         return ;
     }
+    // Increment that this file has been accessed and close file
+    fileAccesses++ ;
     inFile.close() ;
 }
 
@@ -517,6 +536,18 @@ void Library::saveBooksToFile()
         return ;
     }
     outFile.close() ;
+}
+
+void Library::refreshCollection()
+{
+    // Clear books from collection array
+    for (int currentBook = 0 ; currentBook < 100 ; currentBook++)
+    {
+        bookCollection[currentBook] = Book() ;
+    }
+
+    // Reload books from the file
+    loadBooksFromFile() ;
 }
 
 // Main function

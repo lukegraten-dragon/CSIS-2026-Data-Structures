@@ -4,7 +4,6 @@
 # include <format>
 # include <fstream>
 # include <sstream>
-# include <typeinfo>
 using namespace std ;
 
 // Book Class
@@ -39,8 +38,6 @@ Book::Book()
 
 Book::Book(string t, string a, int y, int p)
 {
-    // TODO: Ensure integer data passed into this object
-    // constructor is valid.
     title = t ;
     author = a ;
     year = y ;
@@ -88,10 +85,12 @@ class Library
 {
     private:
         Book bookCollection[100] ;
+        int fileAccesses = 0 ; // Track how many times the source txt file was accessed
 
         // Private Helper Functions
         void loadBooksFromFile() ;
         void saveBooksToFile() ;
+        void refreshCollection() ; // Refresh the collection of books in sequential order
 
     public:
         Library() ; // Default Constructor
@@ -139,6 +138,9 @@ void Library::addBook(Book newBook)
 
             // Save the book to output txt file
             saveBooksToFile() ;
+
+            // Refresh the book collection
+            refreshCollection() ;
         }
         else
         {
@@ -172,7 +174,7 @@ void Library::displayAllBooks()
     cout << dividerLine << '\n';
 
     // Loop through books in our library and print them
-    for (int currentBook = 0 ; currentBook < 100 ; currentBook++)
+    for (int currentBook = 0; currentBook < 100 ; currentBook++)
     {
         if (bookCollection[currentBook].getTitle() != "" )
         {
@@ -195,6 +197,9 @@ void Library::removeBookByNumber(int number)
 
             // Save the book to output txt file
             saveBooksToFile() ;
+
+            // Refresh the book collection
+            refreshCollection() ;
         }
         else
         {
@@ -224,6 +229,9 @@ void Library::removeBookByTitle(string title)
                 cout << "Book removed successfully!" << '\n' ;
                 // Save the book to output txt file
                 saveBooksToFile() ;
+
+                // Refresh the book collection
+                refreshCollection() ;
 
                 return ; // Exit this function successfully
             }
@@ -415,7 +423,7 @@ void Library::loadBooksFromFile()
 {
     // Declare input file
     ifstream inFile ;
-    inFile.open("booklist.txt") ;
+    inFile.open("testbooklist.txt") ;
 
     // Book Collection Index
     int bookIndex = 0 ;
@@ -463,7 +471,13 @@ void Library::loadBooksFromFile()
                 // Create a Book to place in the library
                 Book rBook = Book(rTitle, rAuthor, rYear, rPages) ; 
                 bookCollection[bookIndex] = rBook ;
-                cout << "Book added successfully!" << '\n' ;
+
+                if (fileAccesses == 0)
+                {
+                    // Do not display this message on collection refresh.
+                    // Only on initial startup.
+                    cout << "Book added successfully!" << '\n' ;
+                }
             }
             catch (const invalid_argument& e)
             {
@@ -475,7 +489,7 @@ void Library::loadBooksFromFile()
                 // Skip to next line
                 continue ;
             }
-            bookIndex++ ; 
+            bookIndex++ ;
         }
     }
     else
@@ -483,6 +497,8 @@ void Library::loadBooksFromFile()
         // Exit function with no books if file does not open
         return ;
     }
+    // Increment that this file has been accessed and close file
+    fileAccesses++ ;
     inFile.close() ;
 }
 
@@ -490,7 +506,7 @@ void Library::saveBooksToFile()
 {
     // Generate an output file
     ofstream outFile ;
-    outFile.open("finalbooklist.txt") ;
+    outFile.open("testbooklist.txt") ;
 
     // Write all books as a comma-separated file
     if (outFile.is_open())
@@ -512,6 +528,17 @@ void Library::saveBooksToFile()
     outFile.close() ;
 }
 
+void Library::refreshCollection()
+{
+    // Clear books from collection array
+    for (int currentBook = 0 ; currentBook < 100 ; currentBook++)
+    {
+        bookCollection[currentBook] = Book() ;
+    }
+
+    // Reload books from the file
+    loadBooksFromFile() ;
+}
 
 int main()
 {
@@ -536,7 +563,7 @@ int main()
     // Build the library object
     Library library ;
 
-    // TEST: Check for overflow in BookCollection
+   // TEST: Check for overflow in BookCollection
     // for (int currentBook = 0 ; currentBook < (100 - 5) ; currentBook++ )
     // {
     //     Book spamBook = Book(format("About Android {}", currentBook), "Hacker", 2024, 350) ;
@@ -577,16 +604,16 @@ int main()
     // library.displayBookByTitle("About iOS 26") ;
 
     // TEST: Add Book with invalid type data
-    int aYear = 0 ; 
+    // int aYear = 0 ; 
 
-    cout << "Enter Year Here: " ;
-    cin >> aYear ;
-    cout << '\n' ;
+    // cout << "Enter Year Here: " ;
+    // cin >> aYear ;
+    // cout << '\n' ;
 
-    Book androidBookFraud("About Android Fraud", "Android Authors", aYear, 390) ;
-    library.addBook(androidBookFraud) ;
+    // Book androidBookFraud("About Android Fraud", "Android Authors", aYear, 390) ;
+    // library.addBook(androidBookFraud) ;
 
-    library.displayAllBooks() ;
+    // library.displayAllBooks() ;
 
     return 0 ;
 }

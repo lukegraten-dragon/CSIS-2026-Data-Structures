@@ -119,9 +119,6 @@ class Library
 
 Library::Library()
 {
-    // Initialize empty array of Books
-    bookCollection[100] ;
-
     // Read from a file
     loadBooksFromFile() ;
 }
@@ -514,6 +511,7 @@ void Library::loadBooksFromFile()
     else
     {
         // Exit function with no books if file does not open
+        cout << "ERROR: Input file not opened" ;
         return ;
     }
     // Increment that this file has been accessed and close file

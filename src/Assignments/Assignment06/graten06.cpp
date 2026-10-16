@@ -5,7 +5,7 @@
 // Student ID: 17013071
 // Course: CSIS 255
 // Assignment 06
-// Date Modified: 10-13-2026
+// Date Modified: 10-16-2026
 // Generative AI Use: No AI Used
 //
 /******************************************************/
@@ -14,6 +14,7 @@
 # include <iomanip>
 # include <fstream>
 # include <sstream>
+#include <limits>
 using namespace std ;
 
 class Book

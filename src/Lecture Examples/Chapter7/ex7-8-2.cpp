@@ -16,7 +16,10 @@ int main ()
 {
     cout << N << endl ;
     cout << RATE << endl ;
-    cout << count << endl ;
+
+    // Use the scope resolution operator to fix
+    // ambiguity between differing namespace
+    cout << globalType::count << endl ;
 
     return 0 ;
 }

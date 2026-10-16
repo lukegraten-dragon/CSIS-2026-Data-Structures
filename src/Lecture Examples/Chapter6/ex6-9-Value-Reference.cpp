@@ -3,6 +3,7 @@
 
 using namespace std ;
 
+// Function prototype
 void areaAndPerimeter(double length, double width,
                       double& area, double& perimeter) ;
 
@@ -34,7 +35,7 @@ int main()
 void areaAndPerimeter(double length, double width,
                       double& area, double& perimeter)
 {
-    area = length * width ;
+    area = length * width ; // With a reference we can directly assign computed values to the aliased parameter
     perimeter = 2 * (length + width) ;
 }
 

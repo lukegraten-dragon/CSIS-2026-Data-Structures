@@ -11,6 +11,7 @@
 # include <iostream>
 # include <string>
 # include <fstream>
+# include <iomanip>
 using namespace std ;
 
 const int MAX_ITEMS = 10 ;

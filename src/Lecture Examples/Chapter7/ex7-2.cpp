@@ -9,5 +9,6 @@ int main ()
     // JUNIOR, and SENIOR.
     enum standing {FRESHMAN, SOPHOMORE, JUNIOR, SENIOR} ;
 
+    cout << SOPHOMORE << '\n' ;
     return 0 ;
 }

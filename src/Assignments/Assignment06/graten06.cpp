@@ -584,6 +584,13 @@ int main()
 /*
 Post Assignment Reflection:
 
+NOTE: I just discovered that the 'works on my machine' trap screwed me over.
+    As my previous assignment failed to compile on the CSIS-smoke grading server
+    due to a missing header, even though it somehow compiled fine on my local machine
+    without the header declared. So now I'm testing my source code
+    in a fresh VM on an actual linux distribution so I hopefully
+    run into less issues like these.
+
 I learned about how I could define a class to create
 an object with different attributes and functions. I then
 applied that knowledge with my knowledge of arrays, loops,

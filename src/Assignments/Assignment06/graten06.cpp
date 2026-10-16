@@ -12,7 +12,6 @@
 # include <iostream>
 # include <string>
 # include <iomanip>
-# include <format>
 # include <fstream>
 # include <sstream>
 using namespace std ;
@@ -87,7 +86,10 @@ string Book::getTitle()
 
 string Book::toString()
 {
-   return format("{},{},{},{}", title, author, year, pages) ;
+   return  title + ',' 
+   + author + ',' 
+   + to_string(year) + ',' 
+   + to_string(pages); 
 }
 
 // Implemented Library Class
@@ -161,7 +163,7 @@ void Library::addBook(Book newBook)
         }
         else
         {
-            throw out_of_range(format("Library::addBook({}) -> Can't add titled book out of range!", newBook.getTitle())) ;
+            throw out_of_range("Library::addBook(" + newBook.getTitle() + ") -> Can't add titled book out of range!") ;
         }
     }
     catch (const out_of_range& e)
@@ -227,7 +229,7 @@ void Library::removeBookByNumber(int number)
         else
         {
             // Raise an out of range error
-            throw out_of_range(format("Library::removeBookByNumber({}) -> Out of range book number!", number)) ;
+            throw out_of_range("Library::removeBookByNumber(" + to_string(number) + ") -> Out of range book number!") ;
         }
     }
     catch(const out_of_range& e)
@@ -260,7 +262,7 @@ void Library::removeBookByTitle(string title)
             }
         }
         // If a book without a matching title is found, throw an error.
-        throw invalid_argument(format("Library::removeBookByTitle({}) -> Book title not found!", title)) ;
+        throw invalid_argument("Library::removeBookByTitle(" + title + ") -> Book title not found!") ;
     }
     catch(const invalid_argument& e)
     {
@@ -304,7 +306,7 @@ void Library::displayBooksByAuthor(string author)
         // If we didn't find any books of this author
         if (authoredBooks == 0)
         {
-            throw invalid_argument(format("Library::displayBooksByAuthor({}) -> This author does not exist!", author)) ;
+            throw invalid_argument("Library::displayBooksByAuthor(" + author + ") -> This author does not exist!") ;
         }
     }
     catch(const invalid_argument& e)
@@ -344,7 +346,7 @@ void Library::displayBookByTitle(string title)
             }
         }
         // Throw an error if no book of the desired title was found
-        throw invalid_argument(format("Library::displayBooksByTitle({}) -> This title does not exist!", title)) ;
+        throw invalid_argument("Library::displayBooksByTitle(" + title + ") -> This title does not exist!") ;
     }
     catch(const invalid_argument& e)
     {

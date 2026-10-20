@@ -29,7 +29,25 @@ I'm committed to writing more safe and correct code from the start as a habit.
     "-fno-omit-frame-pointer",
     "-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE",
     "-fstack-protector-strong",
-    "-mbranch-protection=standard", // Supported on ARM v8.5+ or v9.0+ CPUs that only have Branch Target Identification (BTI) mitigation
+    "-mbranch-protection=standard", // Supported on ARM v8.5+ or v9.0+ CPUs that only have Branch Target Identification (BTI) mitigation (e.g. Apple M2)
     "-o",
     "${workspaceFolder}/build/${fileBasenameNoExtension}"
+```
+
+### AI Use Policy
+
+Labs or Assignments that have AI-generated code will be developed in a separate branch from the development branch. With a separate git commit history before being merged
+back into ``dev``.
+
+Prompt history and responses will be uploaded in a separate text file or document.
+
+Inside the source files, detailed comments will be used to indicate where AI generated code is present.
+
+```
+## Model: Model Name (e.g. Gemma 4 12B)
+## BEGIN AI-GENERATED CODE
+
+Code...
+
+### END AI-GENERATED CODE
 ```

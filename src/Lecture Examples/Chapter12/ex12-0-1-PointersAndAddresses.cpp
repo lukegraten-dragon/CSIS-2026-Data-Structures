@@ -25,7 +25,7 @@ int main()
     &x gives the memory address of x, and this address 
     is stored in the pointer ptr.
     */
-    ip = &x ;    // ip now points to x
+    ip = &x ;    // ip now points to x's actual value instead of the address
     //w = &x ;   // error: invalid conversion from ‘int*’ to ‘int’
 
     cout << "ip = &x means 'referencing x' to get its memory address." << endl ;

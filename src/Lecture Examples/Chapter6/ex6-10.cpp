@@ -48,3 +48,4 @@ void averageAndGrade(int testScore, int progScore,
 }
 
 // Uses call by refernce without a return statement
+// The testScore and progScore are passed as copies. While the average and corresponding grade are modified in place via reference

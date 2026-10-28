@@ -28,7 +28,7 @@ char courseGrade(int score)
     case 3: 
     case 4: 
     case 5: 
-        return 'F' ;
+        return 'F' ; // In this scenario case fall through is cleverly used to return (which terminates the function block) a letter grade.
     case 6: 
         return 'D' ;
     case 7: 

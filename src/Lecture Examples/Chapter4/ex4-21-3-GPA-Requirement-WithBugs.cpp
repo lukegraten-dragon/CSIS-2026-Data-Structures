@@ -12,13 +12,18 @@ int main()                                               //Line 3
     cin >> gpa ;                                         //Line 7
     cout << endl ;                                       //Line 8
 
-    if (gpa >= 2.0)                                      //Line 9
-        if (gpa >= 3.9)                                  //Line 10
-            cout << "Dean\'s Honor List." << endl ;      //Line 11
-    else                                                 //Line 12
+    if (gpa >= 2.0)    
+    {                                 //Line 9
+        if (gpa >= 3.9)  
+        {                                //Line 10
+            cout << "Dean\'s Honor List." << endl ;
+        } 
+    }     //Line 11
+    else
+    {                                               //Line 12
         cout << "The GPA is below the graduation "
              << "requirement. \nSee your "
              << "academic advisor." << endl ;            //Line 13
-
+    }
     return 0 ;                                           //Line 14
 }                                                        //Line 15

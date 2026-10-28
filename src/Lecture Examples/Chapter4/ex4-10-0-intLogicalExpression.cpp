@@ -12,7 +12,7 @@ int main ()
     cout << "Enter age: " ;
     cin >> age ;
 
-    legalAge = (age >= 21) ;
+    legalAge = (age >= 21) ; // 0 -> false, 1 -> true
 
     cout << "legalAge = " << legalAge << endl ;
     

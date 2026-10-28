@@ -20,7 +20,7 @@ int main()
     int my_array[5] = {10, 20, 30, 40, 50} ;
     int *pointer_address ;
 
-    // Dereference the initial element
+    // Capture address of initial element
     pointer_address = &my_array[0] ;
 
     cout << "Array elements: " ;
@@ -34,12 +34,12 @@ int main()
         0x16b3ae340
         0x16b3ae344
         0x16b3ae348
-        0x16b3ae34c
+        0x16b3ae34ca
         0x16b3ae350 
         */
 
         // Get the value for the ith element
-        // using pointer arithmetic
+        // using pointer arithmetic via dereferencing
         int address_value = *(pointer_address + i) ;
 
         // Print the value of the ith element

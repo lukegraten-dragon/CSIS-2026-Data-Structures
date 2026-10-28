@@ -27,7 +27,7 @@ int main()
     */
     cExpPtr = &cExpObject ;
 
-    // (*cExpPtr).setX(5) ;
+    // (*cExpPtr).setX(5) ; // Dereferences (gets the actual value)
     // (*cExpPtr).print() ;
     /*
     The expression (*cExpPtr).setX(5) is a mixture of pointer dereferencing and the
@@ -35,7 +35,7 @@ int main()
     the dereferencing operator.
     */
     
-    cExpPtr->setX(5) ;
+    cExpPtr->setX(5) ; // Avoids typos related to *. -> dereferences the pointer
     cExpPtr->print() ;
     
     /*

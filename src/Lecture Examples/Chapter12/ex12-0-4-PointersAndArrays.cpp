@@ -18,8 +18,10 @@ int main()
     // Since s is a pointer, incrementing it is perfectly legal; s++ has no effect on the character string
     // in the function that called strlen, but merely increments strlen's private copy of the
     // pointer. That means that calls like
-    char array[] = {'a', 'b', 'c', 'd', 'e', 'f'} ;
-    char *ptr = "CSIS 255" ;
+    
+    char array[] = {'a', 'b', 'c', 'd', 'e', 'f', '\0'} ; // Initially missing \0 (null terminator) so it creates an overflow issue
+    
+    char *ptr = "CSIS 255" ; // Better form since we don't need to remember to add \0 (strings self terminate) and its more readable
 
     cout << "strlen(\"hello, world\"): " << strlen("hello, world") << endl ;  /* string constant */
     cout << "strlen(array): " << strlen(array) << endl ;                      /* char array[] ; */
@@ -27,7 +29,7 @@ int main()
     // all work.
 
     // As formal parameters in a function definition,
-    char s[] = {'h', 'e', 'l', 'l', 'o'} ;
+    char s[] = {'h', 'e', 'l', 'l', 'o', '\0'} ;
     cout << s << endl ;
     // and
     // char *s  = "hello" ;
@@ -61,7 +63,7 @@ int strlen(char *s)
 {
     int n ;
 
-    for (n = 0; *s != '\0'; s++)
+    for (n = 0; *s != '\0'; s++) 
         n++ ;
     
     return n ;

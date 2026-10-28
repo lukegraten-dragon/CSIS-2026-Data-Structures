@@ -23,7 +23,7 @@ void rotate(int& value1, int& value2, int& value3)
     Achieves this using pointers.
     */
 
-    // Reference the parameters
+    // Assign pointer to the parameters' memory addresses
     int *ptr_a = &value1 ; // a's memory address
     int *ptr_b = &value2 ; // b's memory address
     int *ptr_c = &value3 ; // c's memory address

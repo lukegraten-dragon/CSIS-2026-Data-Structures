@@ -7,6 +7,7 @@ void functionXYZ() ; // These all have different parameters
 void functionXYZ(int x, double y) ;
 void functionXYZ(double one, int y) ;
 void functionXYZ(int x, double y, char ch) ;
+void functionXYZ(int x, int y) ;
 
 int main()
 {

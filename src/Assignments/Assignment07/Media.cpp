@@ -30,5 +30,5 @@ Media::Media(string t, int y)
 void Media::display() const
 {
     cout << "Title: " << title
-        << "\nYear: " << year ;
+        << ", Year: " << year ;
 }

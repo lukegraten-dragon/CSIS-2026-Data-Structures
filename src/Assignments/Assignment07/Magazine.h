@@ -12,11 +12,17 @@
 #ifndef Magazine_H
 #define Magazine_H
 #include "Media.h"
+
+// Define Class
 class Magazine: public Media
 {
     public:
-    private:
-    
-} ;
+        Magazine() ;
+        Magazine(std::string t, int y, int i) ;
 
+        void display() const ;
+    private:
+        int issueNumber ;
+
+} ;
 #endif

@@ -16,25 +16,23 @@
 #include "Book.h"
 using namespace std ;
 
-Book::Book()
+Book::Book() : Media()
 {
-    Book::Media() ;
     author = "" ;
     pages = 0 ;
 }
 
-Book::Book(string t, int y, string a, int p)
+Book::Book(string t, int y, string a, int p) : Media(t, y)
 {
-    Book::Media(t, y);
     author = a ;
     pages = p ;
 }
 
 void Book::display() const
 {
-    cout << "Book:\n" ;
+    cout << "Type: Book, " ;
 
     Media::display() ;
-    cout << "Author: " << author
-        << "Pages: " << pages ;
+    cout << ", Author: " << author
+        << ", Pages: " << pages << '\n';
 }

@@ -71,3 +71,15 @@ int main()
 
     return 0 ;
 }
+
+/*
+Reflection:
+    In this lab section I learned how to dynamically
+    allocate memory for a 2-Dimensional array and
+    access elements inside it.
+
+    I enhanced my understanding when it comes to passing
+    dynamically allocated objects such as arrays into functions. Since
+    the array was 2D the biggest challenge was calculating
+    the index. 
+*/

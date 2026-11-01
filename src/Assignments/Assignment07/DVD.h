@@ -9,3 +9,20 @@
 // AI Use: No AI used.
 //
 /******************************************************/
+#ifndef DVD_H
+#define DVD_H
+#include "Media.h"
+
+// Define Class
+class DVD: public Media
+{
+    public:
+        DVD() ;
+        DVD(std::string t, int y, int d) ;
+        void display() const ;
+
+    private:
+        int duration ;
+} ;
+
+#endif

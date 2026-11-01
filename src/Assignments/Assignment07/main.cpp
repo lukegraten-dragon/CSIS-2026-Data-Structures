@@ -31,10 +31,30 @@ int main() {
 }
 
 /*
+Compilation Command:
+g++ main.cpp Media.cpp Book.cpp Magazine.cpp DVD.cpp -o main.out
+
 Reflection:
-Write your required reflection here. Replace this instruction text with a short
-but meaningful paragraph describing what you learned from completing Assignment 07.
-Your reflection may discuss inheritance, base and derived classes, constructors,
-const member functions, reusing Media::display(), challenges you encountered,
-and how you solved them.
+    In this lab I got to learn how to apply class inheritance
+    to create derived classes with common member functions and
+    variables.
+
+    A minor challenge I encountered was with separating
+    class declarations and implementations in separate files.
+    I initially forgot to implement header guards, so my program
+    wouldn't compile correctly. But after reviewing the example
+    code I included them, making program compile properly.
+
+    Another challenge was implementing the constructors.
+    I initially thought that I could call the base class constructors
+    inside the derived class constructor, but that wasn't the case.
+
+    Derived::Derived(args) : Media(args)
+
+    With this fix, the member variables were properly being
+    set, and would appear in the program output.
+
+    Type: Book, Title: , Year: 0, Author: J.D. Salinger, Pages: 277 // [Bad output]
+    Type: Book, Title: The Catcher in the Rye, Year: 1951, Author: J.D. Salinger, Pages: 277 // [Good output]
+
 */

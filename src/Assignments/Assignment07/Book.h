@@ -18,6 +18,7 @@
 class Book: public Media
 {
     public:
+        using Media::Media ;
         // Constructors
         Book();
         Book(std::string t, int y, std::string a, int p) ;

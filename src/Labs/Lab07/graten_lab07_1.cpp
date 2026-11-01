@@ -76,3 +76,15 @@ int main()
 
     return 0 ;
 }
+
+/*
+Reflection:
+    In this lab section I learned how
+    to dynamically allocate memory using pointers 
+    and to properly free it using the delete keyword,
+    and to set the pointer to null to avoid a dangling pointer.
+
+    A challenge I experienced was changing my thinking to be
+    more defensive. As now I had to carefully ensure I had 
+    managed the memory I dynamically allocated properly. 
+*/

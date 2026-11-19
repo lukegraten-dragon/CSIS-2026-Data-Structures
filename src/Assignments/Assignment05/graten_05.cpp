@@ -5,13 +5,13 @@
 // Student ID: 17013071
 // Course: CSIS 255
 // Assignment 05
-// Date Modified: 10-04-2026
+// Date Modified: 11-09-2026
 //
 /******************************************************/
 # include <iostream>
 # include <string>
 # include <fstream>
-# include <iomanip>
+# include <iomanip> // UPDATE: Included so a compile time error doesn't occur
 using namespace std ;
 
 const int MAX_ITEMS = 10 ;
@@ -185,4 +185,19 @@ the code in main().
 
 I found that creating a separate cpp file to test sections of the code I was implementing
 to be helpful. As I could ensure that each individual function correctly worked.
+
+UPDATE 11.09.2026:
+    A missing header (iomanip) blocked compilation on the professor's
+    grading machine. The program somehow compiled fine
+    on my local machine (MacBook) before the initial submission.
+
+    This bug is still reproducible on my machine so I don't know
+    if its a quirk with how my build environment is configured.
+
+    The missing header has been
+    added.
+
+    The rest of the program remains unchanged and runs
+    according to the specifications outlined in this
+    assignment's pdf handout. 
 */

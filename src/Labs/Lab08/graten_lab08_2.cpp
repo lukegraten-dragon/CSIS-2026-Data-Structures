@@ -67,3 +67,12 @@ int main()
  
     return 0 ;
 }
+
+/*
+Lab Section Reflection:
+
+In this lab section I used function templates
+to implement generic type functions. Generic templates
+are something I find interesting and I will try to use them
+for future assignments.
+*/

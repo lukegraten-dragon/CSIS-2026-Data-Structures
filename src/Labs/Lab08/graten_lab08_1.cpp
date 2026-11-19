@@ -124,3 +124,10 @@ int main()
 
     return 0 ;
 }
+
+/*
+Lab Section Reflection:
+In this lab section I got to overload operators to help implement
+custom behavior for my Box class. I found it interesting when using the overloaded
+comparison operators to compare different Box object instances.
+*/

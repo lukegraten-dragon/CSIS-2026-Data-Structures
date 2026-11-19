@@ -2,10 +2,10 @@
 //
 // File Name: main.cpp
 // Minnesota State University Moorhead
-// Name: John Doe
-// StarID: ab1234cd
+// Name: Luke Graten
+// StarID: ft4513wq
 // Assignment 08
-// Date Modified: MM-DD-YYYY
+// Date Modified: 11-09-2026
 //
 /******************************************************/
 
@@ -49,6 +49,20 @@ int main()
 
 /*
 Reflection:
-Replace this instruction text with a short but meaningful paragraph describing
-what you learned from completing Assignment 08.
+
+Compile Command:
+    g++ main.cpp Circle.cpp Rectangle.cpp Shape.cpp Triangle.cpp -o main.out
+
+In this assignment I defined abstract classes with their own
+functionality from a base class (shape). Each derived
+class had overriden and implemented the virtual area, perimeter, and display functions
+listed in the base class.
+
+I also got more experience using header files to define
+my classes. 'this->parameter' was used a lot inside constructors or any
+case where parameters had a similar name to the private variables. I 
+prefer using this approach since it helps with readability.
+
+Overall, I thought this assignment was a fun activity to help
+increase my understanding of C++ classes.
 */
